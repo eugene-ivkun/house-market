@@ -1,0 +1,356 @@
+@import "reset", "fonts";
+
+svg{
+    fill: black;
+}
+
+$brand-color: #267CAD;
+$brand-color-dark: #1A1F39;
+$light-text: #797979;
+$accent-color: #FF0000;
+
+body{
+    font-weight: 500;
+    font-family: Muller;
+    color: $light-text;
+}
+
+$con-pad: 15px;
+
+@function con-size($w) {
+    @return $w + ($con-pad * 2);
+}
+
+@function em($def, $col) {
+    @return ($col / $def) + 0em;
+}
+
+.container{
+    max-width: con-size(1434px);
+    padding: 0 $con-pad;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.cart-btn{
+    width: 24px;
+    height: 24px;
+    position: relative;
+    &__link{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    &__icon{
+        width: 100%;
+        height: 100%;
+        padding: 2px;
+        transition: all 0.2s;
+        &:hover{
+            fill: lighten(black, 50%)
+        }
+    }
+    &__num{
+        position: absolute;
+        top: -2px;
+        left: 12px;
+        background-color: $accent-color;
+        padding: 2px 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+        color: white;
+        line-height: 1em;
+        border-radius: 500px;
+        height: 15px;
+        border: 1px solid white;
+        pointer-events: none;
+    }
+}
+
+.header{
+    &__body{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 44px 0 26px 0;
+    }
+    &__search{
+        position: relative;
+        flex: 1;
+        &-form{
+            display: flex;
+        }
+        &-input{
+            width: 100%;
+            display: block;
+            height: 44px;
+            border-radius: 4px;
+            padding-left: 18px;
+            border: 1px solid #C0C0C0;
+            padding-right: 50px;
+            transition: all 0.2s;
+            outline: none;
+            &:focus, &:hover{
+                border: 1px solid $light-text;
+                &::placeholder, &::-webkit-input-placeholder, &:-ms-input-placeholder{
+                    color: $light-text;
+                }
+            }
+            &::placeholder, &::-webkit-input-placeholder, &:-ms-input-placeholder{
+                font-family: Muller;
+                font-size: 16px;
+                color: #C0C0C0;
+            }
+
+            
+        }
+    }
+    &-search{
+        &__submit-wrap{
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            height: 100%;
+            z-index: 10;
+            width: 40px;
+        }
+        &__submit{
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            border: 1px solid transparent;
+            border-radius: 0px 4px 4px 0px;
+            cursor: pointer;
+            &:hover + .header-search__icon{
+                stroke: $light-text;
+            }
+        }
+        &__icon{
+            width: 24px;
+            height: 24px;
+            padding: 0 3px;
+            fill: transparent;
+            stroke: #C0C0C0;
+            stroke-width: 2;
+            position: absolute;
+            top: 50%;
+            transition: stroke 0.2s;
+            left: 5px;
+            z-index: -1;
+            transform: translate(0, -50%);
+        }
+    }
+    &__action{
+        display: flex;
+        align-items: center;
+        &-item{
+            margin-left: 32px;
+        }
+    }
+    &__cart-btn{
+        margin-right: 22px;
+    }
+    &__logo{
+        margin-right: 22px;
+    }
+    &__about{
+        &-text-sm{
+            font-size: 12px;
+            line-height: em(12px, 20px);
+        }
+        &-text-lg{
+            color: black;
+            font-size: 14px;
+            line-height: em(14px, 16px);
+        }
+    }
+    &__nav-line{
+        display: flex;
+        position: relative;
+    }
+}
+
+.header-nav{
+    border-radius: 4px;
+    background-color: $brand-color;
+    flex: 1;
+    &__list{
+        display: flex;
+        justify-content: flex-start;
+    }
+    &__item{
+        // flex-grow: 1;
+        // flex-basis: auto;
+        text-align: center;
+        cursor: pointer;
+        flex-grow: 1;
+        flex-basis: auto;
+        font-size: 18px;
+        line-height: em(18px, 20px);
+        min-height: 45px;
+        &:not(:last-child) {
+            border-right: 1px solid #0D5680;
+        }
+    }
+    &__link{
+        display: block;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
+        color: white;
+        background-color: $brand-color;
+        transition: all 0.2s;
+        &:hover{
+            background-color: darken($brand-color, 5%)
+        }
+        
+    }
+}
+
+.header-cataloge{
+    width: 13.4%;
+    margin-right: 1.4%;
+    &:hover{
+        .header-cataloge__inner{
+            display: flex;
+        }
+    }
+    &__btn{
+        min-height: 45px;
+        width: 100%;
+        font-size: 16px;
+        height: 100%;
+        display: flex;
+        padding: 10px 17px 10px 13px;
+        justify-content: space-between;
+        align-items: center;
+        line-height: em(16px, 16px);
+        color: white;
+        background-color: $brand-color-dark;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    &__btn-icon{
+        width: 16px;
+        height: 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__btn-line{
+        width: 100%;
+        height: 2px;
+        border-radius: 500px;
+        background-color: white;
+    }
+    &__item{
+        & + &{
+            margin-top: 13px;
+        }
+        &-text{
+            color: black;
+            font-size: 16px;
+            line-height: em(16px, 20px);
+
+        }
+        &-link{
+            display: block;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            padding: 7px 11px 7px 11px;
+            border-radius: 4px;
+            &:hover{
+                background-color: #F4F4F4;
+            }
+            &:hover .header-cataloge__item-icon{
+                fill: $brand-color;
+                &--stroke{
+                    fill: transparent;
+                    stroke: $brand-color;
+                }
+            }
+        }
+        &-icon{
+            flex: 0 0 32px;
+            height: 32px;
+            padding: 2.5px;
+            border: 1px solid transparent;
+            margin-right: 12px;
+            fill: #C0C0C0;
+            transition: all 0.2s;
+            &--stroke{
+                fill: transparent;
+                stroke: #C0C0C0;
+            }
+        }
+    }
+    &__inner{
+        position: absolute;
+        padding-top: 15px;
+        width: 100%;
+        display: flex;
+    }
+    &__nav{
+        width: 27.8%;
+        padding: 11px 15px 32px 15px;
+        background-color: white;
+        border-radius: 4px 0 0 4px;
+        box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
+        position: relative;
+        z-index: 10;
+        flex-shrink: 0;
+    }
+    &__tabs{
+        &-wrap{
+            width: 100%;
+            border-radius: 0 4px 4px 0;
+            box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
+            padding: 22px 39px 22px 39px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &-head{
+            margin-bottom: 20px;
+        }
+        &-list{
+            column-count: 3;
+            column-gap: 32px;
+            column-width: 25px;
+        }
+        &-item + &-item{
+            margin-top: 15px;
+        }
+        &-link{
+            color: black;
+            font-size: 16px;
+            line-height: em(16px, 20px);
+            transition: all 0.2s;
+        }
+        &-link:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+.content-title{
+    font-size: 40px;
+    line-height: 1em;
+    color: black;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+
+
