@@ -546,7 +546,14 @@ body {
   color: white;
   background-color: #1A1F39;
   border-radius: 4px;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
   cursor: pointer;
+}
+
+.header-cataloge__btn:hover {
+  background-color: #252c52;
 }
 
 .header-cataloge__btn-icon {
