@@ -28,10 +28,10 @@ $(document).ready(function() {
             $(".header-cataloge__nav-wrap").removeClass("active");
         }
 // Медиазапросы для меню
-        let media = window.matchMedia("(max-width: 992px)");
+        let mediaSm = window.matchMedia("(max-width: 768px)");
         function headerMenu() {
             removeMenu();
-            if(media.matches) {
+            if(mediaSm.matches) {
                 $(".header-cataloge").off("mouseenter mouseleave");
                 $(".header-cataloge__item").off("mouseenter mouseleave")
                 $(".header-cataloge__btn").click(headerBtn);
@@ -59,8 +59,10 @@ $(document).ready(function() {
                 $(".header-cataloge__item").hover(tabs);
             }
         }
-        media.addEventListener("change", headerMenu);
+        mediaSm.addEventListener("change", headerMenu);
         headerMenu();
+
+    
 
 });
 
