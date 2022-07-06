@@ -47,7 +47,7 @@ $(document).ready(function() {
                         removeMenu();
                     }
                 });
-                $(".header-cataloge__tab-back").click(function() {
+                $(".header-cataloge__tab-head").click(function() {
                     $(".header-cataloge__nav-wrap").removeClass("active");
                     $(".header-cataloge__tab").removeClass("active");
                 })
@@ -57,6 +57,7 @@ $(document).ready(function() {
                 $(".header-cataloge__item").off("click");
                 $(".header-cataloge").hover(headerBtn);
                 $(".header-cataloge__item").hover(tabs);
+                $(".header-cataloge__tab-head").off("click");
             }
         }
         mediaSm.addEventListener("change", headerMenu);

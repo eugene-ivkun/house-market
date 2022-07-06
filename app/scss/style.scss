@@ -338,6 +338,7 @@ $con-pad: 22px;
     margin-right: 1.4%;
     @media (max-width: 992px) {
         width: 18%;
+        min-width: auto;
     }
     @media (max-width: 768px) {
         width: 100%;
@@ -450,7 +451,7 @@ $con-pad: 22px;
             @media (max-width: 992px) {
                 font-size: 14px;
             }
-            @media (max-width: 576px) {
+            @media (max-width: 380px) {
                 font-size: 12px;
             }
 
@@ -591,6 +592,7 @@ $con-pad: 22px;
             @media (max-width: 768px) {
                 display: flex;
                 align-items: center;
+                cursor: pointer;
             }
         }
         &-title{
@@ -632,7 +634,7 @@ $con-pad: 22px;
             @media (max-width: 992px) {
                 font-size: 14px;
             }
-            @media (max-width: 576px) {
+            @media (max-width: 380px) {
                 font-size: 12px;
             }
         }

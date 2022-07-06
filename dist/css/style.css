@@ -864,6 +864,7 @@ body {
 
   .header-cataloge {
     width: 18%;
+    min-width: auto;
   }
 
   .header-cataloge__item + .header-cataloge__item {
@@ -1013,6 +1014,7 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    cursor: pointer;
   }
 
   .header-cataloge__tab-title {
@@ -1047,10 +1049,6 @@ body {
     margin-right: 0px;
   }
 
-  .header-cataloge__item-text {
-    font-size: 12px;
-  }
-
   .header-cataloge__nav {
     padding: 5px 0px 12px 0;
   }
@@ -1067,11 +1065,17 @@ body {
     font-size: 18px;
   }
 
-  .header-cataloge__submenu-link {
+  .content-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 380px) {
+  .header-cataloge__item-text {
     font-size: 12px;
   }
 
-  .content-title {
-    font-size: 18px;
+  .header-cataloge__submenu-link {
+    font-size: 12px;
   }
 }
