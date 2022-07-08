@@ -841,7 +841,6 @@ body {
   background-repeat: no-repeat;
   background-position: left center;
   background-size: cover;
-  border: 1px solid red;
   height: 100%;
 }
 
@@ -1073,11 +1072,6 @@ body {
     padding-right: 60px;
   }
 
-  .banner__item-inner {
-    padding-left: 45px;
-    padding-right: 45px;
-  }
-
   .banner__item-text {
     padding-top: 60px;
     min-height: 275px;
@@ -1214,8 +1208,9 @@ body {
   }
 
   .banner__item-inner {
-    padding-left: 23px;
-    padding-right: 23px;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 50px;
   }
 
   .banner__item-inner--outdoor-work:before {
@@ -1227,8 +1222,9 @@ body {
     min-height: 220px;
   }
 
-  .banner__item-text {
-    padding-top: 23px;
+  .banner__slider-dots {
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
 
   .banner__title {
@@ -1281,6 +1277,17 @@ body {
 
   .content-title {
     font-size: 18px;
+  }
+
+  .banner__item-inner {
+    padding-left: 23px;
+    padding-right: 23px;
+    padding-bottom: 35px;
+  }
+
+  .banner__item-text {
+    padding-top: 23px;
+    min-height: 153px;
   }
 
   .banner__title {

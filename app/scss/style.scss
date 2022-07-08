@@ -696,13 +696,15 @@ $con-pad: 22px;
             padding-left: 60px;
             padding-right: 60px;
         }
-        @media (max-width: 992px) {
+        @media (max-width: 768px) {
             padding-left: 45px;
             padding-right: 45px;
+            padding-bottom: 50px;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 576px) {
             padding-left: 23px;
             padding-right: 23px;
+            padding-bottom: 35px;
         }
         &--outdoor-work{
             background-color: #BBDFF7;
@@ -726,7 +728,6 @@ $con-pad: 22px;
                 background-repeat: no-repeat;
                 background-position: left center;
                 background-size: cover;
-                border: 1px solid red;
                 height: 100%;
                 @media (max-width: 768px) {
                     right: -25px;
@@ -754,8 +755,9 @@ $con-pad: 22px;
             padding-top: 45px;
             min-height: 220px;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 576px) {
             padding-top: 23px;
+            min-height: 153px;
         }
     }
     &__slider-dots{
@@ -768,6 +770,10 @@ $con-pad: 22px;
         align-items: center;
         padding-bottom: 27px;
         padding-top: 24px;
+        @media (max-width: 768px) {
+            padding-top: 14px;
+            padding-bottom: 14px;
+        }
         button{
             display: block;
             font-size: 0px;
