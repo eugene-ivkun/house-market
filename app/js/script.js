@@ -66,6 +66,15 @@ function headerMenu() {
 }
 headerMenu();
 
+$(".banner__slider").slick({
+    dots: true,
+    dotsClass: "banner__slider-dots",
+    arrows: false,
+    // autoplay: true,
+    // autoplaySpeed: 2000,
+    
+});
+
 });
 
 $(window).on("load",function(){
