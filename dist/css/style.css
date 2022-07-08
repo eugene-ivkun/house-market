@@ -1210,7 +1210,7 @@ body {
   .banner__item-inner {
     padding-left: 45px;
     padding-right: 45px;
-    padding-bottom: 50px;
+    padding-bottom: 38px;
   }
 
   .banner__item-inner--outdoor-work:before {
@@ -1233,6 +1233,14 @@ body {
 
   .banner__text-sm {
     font-size: 16px;
+  }
+
+  .banner__social {
+    padding: 9px 8px 13px 8px;
+  }
+
+  .banner__social-img {
+    width: 17px;
   }
 }
 
@@ -1282,21 +1290,26 @@ body {
   .banner__item-inner {
     padding-left: 23px;
     padding-right: 23px;
-    padding-bottom: 35px;
   }
 
   .banner__item-text {
     padding-top: 23px;
-    min-height: 153px;
+    min-height: 165px;
   }
 
   .banner__title {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .banner__text-sm {
-    font-size: 12px;
+    font-size: 14px;
     margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner__text-sm {
+    font-size: 12px;
   }
 }
 
@@ -1307,5 +1320,23 @@ body {
 
   .header-cataloge__submenu-link {
     font-size: 12px;
+  }
+
+  .banner__item-inner {
+    padding-bottom: 33px;
+  }
+
+  .banner__item-text {
+    min-height: 155px;
+  }
+
+  .banner__slider-dots button {
+    width: 5px;
+    height: 5px;
+    margin: 0 3.5px;
+  }
+
+  .banner__title {
+    font-size: 24px;
   }
 }

@@ -699,12 +699,14 @@ $con-pad: 22px;
         @media (max-width: 768px) {
             padding-left: 45px;
             padding-right: 45px;
-            padding-bottom: 50px;
+            padding-bottom: 38px;
         }
         @media (max-width: 576px) {
             padding-left: 23px;
             padding-right: 23px;
-            padding-bottom: 35px;
+        }
+        @media (max-width: 380px) {
+            padding-bottom: 33px;
         }
         &--outdoor-work{
             background-color: #BBDFF7;
@@ -757,7 +759,10 @@ $con-pad: 22px;
         }
         @media (max-width: 576px) {
             padding-top: 23px;
-            min-height: 153px;
+            min-height: 165px;
+        }
+        @media (max-width: 380px) {
+            min-height: 155px;
         }
     }
     &__slider-dots{
@@ -786,6 +791,11 @@ $con-pad: 22px;
             border: 0px;
             margin: 0 7.5px;
             cursor: pointer;
+            @media (max-width: 380px) {
+                width: 5px;
+                height: 5px;
+                margin: 0 3.5px;
+            }
         }
         li.slick-active button{
             background-color: black;
@@ -804,6 +814,9 @@ $con-pad: 22px;
             font-size: 38px;
         }
         @media (max-width: 576px) {
+            font-size: 28px;
+        }
+        @media (max-width: 380px) {
             font-size: 24px;
         }
     }
@@ -815,8 +828,11 @@ $con-pad: 22px;
             font-size: 16px;
         }
         @media (max-width: 576px) {
-            font-size: 12px;
+            font-size: 14px;
             margin-top: 10px;
+        }
+        @media (max-width: 480px) {
+            font-size: 12px;
         }
     }
     &__social{
@@ -828,10 +844,18 @@ $con-pad: 22px;
         box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
         transform: translate(35%, -50%);
         right: 0px;
+        @media (max-width: 768px) {
+            padding: 9px 8px 13px 8px;
+        }
         &-link{
             display: block;
             & + &{
                 margin-top: 12px;
+            }
+        }
+        &-img{
+            @media (max-width: 768px) {
+                width: 17px;
             }
         }
     }
