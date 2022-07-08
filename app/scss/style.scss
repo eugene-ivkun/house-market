@@ -704,8 +704,6 @@ $con-pad: 22px;
         @media (max-width: 576px) {
             padding-left: 23px;
             padding-right: 23px;
-        }
-        @media (max-width: 380px) {
             padding-bottom: 33px;
         }
         &--outdoor-work{
@@ -759,9 +757,6 @@ $con-pad: 22px;
         }
         @media (max-width: 576px) {
             padding-top: 23px;
-            min-height: 165px;
-        }
-        @media (max-width: 380px) {
             min-height: 155px;
         }
     }
@@ -791,7 +786,7 @@ $con-pad: 22px;
             border: 0px;
             margin: 0 7.5px;
             cursor: pointer;
-            @media (max-width: 380px) {
+            @media (max-width: 576px) {
                 width: 5px;
                 height: 5px;
                 margin: 0 3.5px;
@@ -814,7 +809,7 @@ $con-pad: 22px;
             font-size: 38px;
         }
         @media (max-width: 576px) {
-            font-size: 28px;
+            font-size: 26px;
         }
         @media (max-width: 380px) {
             font-size: 24px;
@@ -831,7 +826,7 @@ $con-pad: 22px;
             font-size: 14px;
             margin-top: 10px;
         }
-        @media (max-width: 480px) {
+        @media (max-width: 380px) {
             font-size: 12px;
         }
     }
@@ -855,6 +850,9 @@ $con-pad: 22px;
         }
         &-img{
             @media (max-width: 768px) {
+                width: 20px;
+            }
+            @media (max-width: 380px) {
                 width: 17px;
             }
         }
