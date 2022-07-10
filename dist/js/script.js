@@ -72,7 +72,69 @@ $(".banner__slider").slick({
     arrows: false,
     // autoplay: true,
     // autoplaySpeed: 2000,
-    
+});
+
+$(".categories__slider").slick({
+    slidesToShow: 4,
+    mobileFirst: false,
+    prevArrow: $(".categories__slider-prev"),
+    nextArrow: $(".categories__slider-next"),
+    responsive: [
+        {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 3,
+                centerMode: true,
+                initialSlide: 1
+            }
+        },
+        {
+            breakpoint: 831,
+            settings: {
+                slidesToShow: 2,
+                centerMode: true,
+                centerPadding: "10%",
+                arrows: false,
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                centerMode: true,
+                centerPadding: "10%",
+                arrows: false,
+            }
+        },
+        {
+            breakpoint: 685,
+            settings: {
+                slidesToShow: 2,
+                centerMode: true,
+                centerPadding: "5%",
+                arrows: false
+            }
+        },
+        {
+            breakpoint: 500,
+            settings: {
+                slidesToShow: 1,
+                centerMode: true,
+                centerPadding: "20%",
+                arrows: false,
+                variableWidth: true,
+            }
+        },
+        {
+            breakpoint: 360,
+            settings: {
+                slidesToShow: 1,
+                variableWidth: true,
+                arrows: false,
+                infinite: false
+            }
+        }
+    ]
 });
 
 });

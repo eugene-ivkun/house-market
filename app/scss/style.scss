@@ -9,6 +9,8 @@ $brand-color-dark: #1A1F39;
 $light-text: #797979;
 $accent-color: #FF0000;
 
+$brand-gradient: linear-gradient(180deg, #FFFFFF -38.05%, #4C9FB8 112.63%);
+
 body{
     font-weight: 500;
     font-family: Muller;
@@ -660,7 +662,7 @@ $con-pad: 22px;
         font-size: 25px;
     }
     @media (max-width: 576px) {
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 
@@ -869,6 +871,160 @@ $con-pad: 22px;
         &:hover .banner__social-img{
             filter: brightness(120%);
             transform: scale(1.1);
+        }
+    }
+}
+
+.arrow-icon{
+    &--right{
+        transform: rotate(180deg);
+    }
+}
+
+.item-slider{
+    position: relative;
+    &__arrow{
+        width: 45px;
+        height: 45px;
+        border-radius: 500px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+        display: flex;
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        cursor: pointer;
+        top: 50%;
+        transition: all 0.2s;
+        @media (max-width: 992px) {
+            width: 40px;
+            height: 40px;
+        }
+        &:hover{
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+            .item-slider__arrow-icon{
+                fill: $brand-color;
+            }
+        }
+        &--prev{
+            transform: translate(-50%, -50%);
+        }
+        &--next{
+            right: 0px;
+            transform: translate(50%, -50%);
+        }
+    }
+    &__arrow-icon{
+        width: 24px;
+        height: 24px;
+        padding: 4px;
+        fill: black;
+        transition: all 0.2s;
+    }
+}
+
+.categories{
+    overflow: hidden;
+    padding: 70px 0;
+    &__slider{
+        margin: 0 -15px;
+        @media (max-width: 1200px) {
+            margin: 0 (-$con-pad);
+        }
+        @media (max-width: 360px) {
+            margin: 0;
+        }
+        .slick-list{
+            @media (max-width: 360px) {
+                overflow: visible;
+            }
+        }
+    }
+    &__item{
+        margin: 0 15px;
+        @media (max-width: 992px) {
+            margin: 0 10px;
+        }
+        @media (max-width: 500px) {
+            width: 280px;
+        }
+        @media (max-width: 360px) {
+            width: 250px;
+        }
+        cursor: pointer;
+        &-title{
+            position: absolute;
+            top: 0px;
+            z-index: 10;
+            width: 100%;
+            padding: 24px 32px 0 32px;
+            left: 0px;
+            font-size: 24px;
+            line-height: em(24px, 24px);
+            @media (max-width: 1300px) {
+                font-size: 22px;
+            }
+            @media (max-width: 992px) {
+                font-size: 20px;
+            }
+            @media (max-width: 850px) {
+                // padding: 17px 24px 0 17px
+            }
+            @media (max-width: 604px) {
+                font-size: 18px;
+                padding: 17px 24px 0 17px
+            }
+        }
+    }
+    &__item-inner{
+        padding-bottom: 72.2%;
+        border-radius: 10px;
+        position: relative;
+        background: $brand-gradient;
+        display: block;
+        transition: all 0.2s;
+        overflow: hidden;
+        color: white;
+        position: relative;
+        &:hover{
+            color: black;
+            &:before{
+                background-color: white;
+                opacity: 0.2;
+            }
+        }
+        &:before{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            opacity: 0;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            transition: all 0.2s;
+        }
+    }
+    &__img-wrap{
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        padding-top: 65px;
+    }
+    &__img{
+        height: 100%;
+        width: auto;
+    }
+    &__title{
+        margin-bottom: 35px;
+    }
+    &__slider-prev, &__slider-next{
+        @media (max-width: 767px) {
+            display: none;
         }
     }
 }
