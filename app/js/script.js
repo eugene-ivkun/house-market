@@ -21,7 +21,15 @@ function headerMenu() {
         $(".header-cataloge__btn-icon").removeClass("active");
         $(".header-cataloge__nav-wrap").removeClass("active");
     }
-    // $(window).resize(removeMenu);
+
+    let currentWidth = $(window).width();
+    $(window).on("resize", function() {
+        let newWidth = $(window).width();
+        if(currentWidth !== newWidth) {
+            removeMenu();
+            currentWidth = newWidth;
+        }
+    });
 
     $(document).click(function(e) {
         if(!!$(e.target).closest(".header-cataloge__btn").length) {
