@@ -21,7 +21,7 @@ function headerMenu() {
         $(".header-cataloge__btn-icon").removeClass("active");
         $(".header-cataloge__nav-wrap").removeClass("active");
     }
-    $(window).resize(removeMenu);
+    // $(window).resize(removeMenu);
 
     $(document).click(function(e) {
         if(!!$(e.target).closest(".header-cataloge__btn").length) {
