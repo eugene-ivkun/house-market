@@ -112,6 +112,8 @@ $(".categories__slider").slick({
                 centerMode: true,
                 centerPadding: "10%",
                 arrows: false,
+                dots: true,
+                dotsClass: "categories__slider-dots item-slider__dots"
             }
         },
         {
@@ -120,7 +122,9 @@ $(".categories__slider").slick({
                 slidesToShow: 2,
                 centerMode: true,
                 centerPadding: "5%",
-                arrows: false
+                arrows: false,
+                dots: true,
+                dotsClass: "categories__slider-dots item-slider__dots"
             }
         },
         {
@@ -131,6 +135,8 @@ $(".categories__slider").slick({
                 centerPadding: "20%",
                 arrows: false,
                 variableWidth: true,
+                dots: true,
+                dotsClass: "categories__slider-dots item-slider__dots"
             }
         },
         {
@@ -139,7 +145,9 @@ $(".categories__slider").slick({
                 slidesToShow: 1,
                 variableWidth: true,
                 arrows: false,
-                infinite: false
+                infinite: false,
+                dots: true,
+                dotsClass: "categories__slider-dots item-slider__dots"
             }
         }
     ]
