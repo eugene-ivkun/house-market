@@ -85,71 +85,102 @@ $(".banner__slider").slick({
 $(".categories__slider").slick({
     slidesToShow: 4,
     mobileFirst: false,
+    infinite: false,
     prevArrow: $(".categories__slider-prev"),
     nextArrow: $(".categories__slider-next"),
     responsive: [
         {
-            breakpoint: 1200,
+            breakpoint: 1150,
             settings: {
                 slidesToShow: 3,
-                centerMode: true,
-                initialSlide: 1
-            }
+            },
         },
         {
-            breakpoint: 831,
+            breakpoint: 769,
             settings: {
                 slidesToShow: 2,
-                centerMode: true,
-                centerPadding: "10%",
-                arrows: false,
-            }
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-                centerMode: true,
-                centerPadding: "10%",
-                arrows: false,
+                variableWidth: true,
                 dots: true,
-                dotsClass: "categories__slider-dots item-slider__dots"
-            }
+                dotsClass: "categories__slider-dots item-slider__dots",
+                arrows: false
+            },
         },
         {
-            breakpoint: 685,
-            settings: {
-                slidesToShow: 2,
-                centerMode: true,
-                centerPadding: "5%",
-                arrows: false,
-                dots: true,
-                dotsClass: "categories__slider-dots item-slider__dots"
-            }
-        },
-        {
-            breakpoint: 500,
+            breakpoint: 577,
             settings: {
                 slidesToShow: 1,
                 centerMode: true,
-                centerPadding: "20%",
-                arrows: false,
                 variableWidth: true,
                 dots: true,
-                dotsClass: "categories__slider-dots item-slider__dots"
-            }
+                dotsClass: "categories__slider-dots item-slider__dots",
+                arrows: false
+            },
         },
         {
-            breakpoint: 360,
+            breakpoint: 375,
             settings: {
                 slidesToShow: 1,
+                centerMode: false,
                 variableWidth: true,
-                arrows: false,
-                infinite: false,
                 dots: true,
-                dotsClass: "categories__slider-dots item-slider__dots"
-            }
-        }
+                dotsClass: "categories__slider-dots item-slider__dots",
+                arrows: false
+            },
+        },
+        // {
+        //     breakpoint: 831,
+        //     settings: {
+        //         slidesToShow: 2,
+        //         centerMode: true,
+        //         centerPadding: "10%",
+        //         arrows: false,
+        //     }
+        // },
+        // {
+        //     breakpoint: 768,
+        //     settings: {
+        //         slidesToShow: 2,
+        //         centerMode: true,
+        //         centerPadding: "10%",
+        //         arrows: false,
+        //         dots: true,
+        //         dotsClass: "categories__slider-dots item-slider__dots"
+        //     }
+        // },
+        // {
+        //     breakpoint: 685,
+        //     settings: {
+        //         slidesToShow: 2,
+        //         centerMode: true,
+        //         centerPadding: "5%",
+        //         arrows: false,
+        //         dots: true,
+        //         dotsClass: "categories__slider-dots item-slider__dots"
+        //     }
+        // },
+        // {
+        //     breakpoint: 500,
+        //     settings: {
+        //         slidesToShow: 1,
+        //         centerMode: true,
+        //         centerPadding: "20%",
+        //         arrows: false,
+        //         variableWidth: true,
+        //         dots: true,
+        //         dotsClass: "categories__slider-dots item-slider__dots"
+        //     }
+        // },
+        // {
+        //     breakpoint: 360,
+        //     settings: {
+        //         slidesToShow: 1,
+        //         variableWidth: true,
+        //         arrows: false,
+        //         infinite: false,
+        //         dots: true,
+        //         dotsClass: "categories__slider-dots item-slider__dots"
+        //     }
+        // }
     ]
 });
 

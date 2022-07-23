@@ -1454,11 +1454,11 @@ body {
 
 @media (max-width: 1300px) {
   .categories__item-title {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1249px) {
   .products {
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 4%;
@@ -1468,10 +1468,6 @@ body {
 @media (max-width: 1200px) {
   .banner__title {
     font-size: 55px;
-  }
-
-  .categories__slider {
-    margin: 0 -22px;
   }
 }
 
@@ -1603,10 +1599,6 @@ body {
     margin: 0 10px;
   }
 
-  .categories__item-title {
-    font-size: 20px;
-  }
-
   .categories__title {
     margin-bottom: 25px;
   }
@@ -1627,6 +1619,23 @@ body {
     -webkit-column-count: 1;
     -moz-column-count: 1;
     column-count: 1;
+  }
+}
+
+@media (max-width: 830px) {
+  .categories__item-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 769px) {
+  .categories__item {
+    width: 42vw;
+  }
+
+  .categories__slider-prev,
+  .categories__slider-next {
+    display: none;
   }
 }
 
@@ -1787,19 +1796,20 @@ body {
     padding: 55px 0 45px 0;
   }
 
+  .categories__slider {
+    margin: 0;
+  }
+
+  .categories__slider .slick-list {
+    overflow: visible;
+  }
+
   .sales-leader {
     padding-bottom: 35px;
   }
 
   .sales-leader__btn-wrap {
     margin-bottom: 15px;
-  }
-}
-
-@media (max-width: 767px) {
-  .categories__slider-prev,
-  .categories__slider-next {
-    display: none;
   }
 }
 
@@ -1867,7 +1877,8 @@ body {
   }
 
   .products--mobile-slider .products__card-lg-about {
-    padding: 0 0 0 8.2%;
+    margin-left: 8.2%;
+    margin-right: 2%;
   }
 
   .products--mobile-slider .products__card-lg-name {
@@ -1880,13 +1891,6 @@ body {
 
   .products--mobile-block {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 604px) {
-  .categories__item-title {
-    font-size: 18px;
-    padding: 17px 24px 0 17px;
   }
 }
 
@@ -1969,6 +1973,10 @@ body {
     padding: 30px 0 22px 0;
   }
 
+  .categories__item {
+    width: 275px;
+  }
+
   .categories__title {
     margin-bottom: 20px;
   }
@@ -1986,12 +1994,6 @@ body {
   .products--mobile-slider .products__item {
     width: 50.4vw;
     min-width: 214px;
-  }
-}
-
-@media (max-width: 500px) {
-  .categories__item {
-    width: 280px;
   }
 }
 
@@ -2040,15 +2042,7 @@ body {
   }
 }
 
-@media (max-width: 360px) {
-  .categories__slider {
-    margin: 0;
-  }
-
-  .categories__slider .slick-list {
-    overflow: visible;
-  }
-
+@media (max-width: 375px) {
   .categories__item {
     width: 250px;
   }

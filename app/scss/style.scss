@@ -970,14 +970,11 @@ $con-pad: 22px;
     }
     &__slider{
         margin: 0 -15px;
-        @media (max-width: 1200px) {
-            margin: 0 (-$con-pad);
-        }
-        @media (max-width: 360px) {
+        @media (max-width: 768px) {
             margin: 0;
         }
         .slick-list{
-            @media (max-width: 360px) {
+            @media (max-width: 768px) {
                 overflow: visible;
             }
         }
@@ -987,12 +984,18 @@ $con-pad: 22px;
         @media (max-width: 992px) {
             margin: 0 10px;
         }
-        @media (max-width: 500px) {
-            width: 280px;
+        @media (max-width: 769px) {
+            width: 42vw;
         }
-        @media (max-width: 360px) {
+        @media (max-width: 576px) {
+            width: 275px;
+        }
+        @media (max-width: 375px) {
             width: 250px;
         }
+        // @media (max-width: 360px) {
+        //     width: 250px;
+        // }
         cursor: pointer;
         &-title{
             position: absolute;
@@ -1004,17 +1007,10 @@ $con-pad: 22px;
             font-size: 24px;
             line-height: em(24px, 24px);
             @media (max-width: 1300px) {
-                font-size: 22px;
-            }
-            @media (max-width: 992px) {
                 font-size: 20px;
             }
-            @media (max-width: 850px) {
-                // padding: 17px 24px 0 17px
-            }
-            @media (max-width: 604px) {
+            @media (max-width: 830px) {
                 font-size: 18px;
-                padding: 17px 24px 0 17px
             }
         }
     }
@@ -1071,7 +1067,7 @@ $con-pad: 22px;
         }
     }
     &__slider-prev, &__slider-next{
-        @media (max-width: 767px) {
+        @media (max-width: 769px) {
             display: none;
         }
     }
@@ -1145,7 +1141,7 @@ $con-pad: 22px;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 1.9%;
     grid-row-gap: 30px;
-    @media (max-width: 1250px) {
+    @media (max-width: 1249px) {
         grid-template-columns: repeat(4, 1fr);
         grid-column-gap: 4%;
     }
@@ -1401,7 +1397,8 @@ $con-pad: 22px;
         }
         &-about{
             @media (max-width: 651px) {
-                padding: 0 0 0 8.2%;
+                margin-left: 8.2%;
+                margin-right: 2%;
             }
         }
         &-name{
