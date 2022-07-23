@@ -153,6 +153,38 @@ $(".categories__slider").slick({
     ]
 });
 
+$(".products--mobile-slider").slick({
+    mobileFirst: true,
+    slidesToShow: 1,
+    infinite: false,
+    slidesToShow: 2,
+    centerMode: true,
+    variableWidth: true,
+    arrows: false,
+    responsive: [
+        {
+            breakpoint: 650,
+            settings: "unslick"
+        },
+        {
+            breakpoint: 512,
+            settings: {
+                
+                slidesToShow: 1,
+                infinite: false,
+                slidesToShow: 2,
+                centerMode: false,
+                variableWidth: true,
+                arrows: false,
+            }
+        }
+     ]
+});
+
+$(window).resize(function() {
+    $(".products--mobile-slider").slick("resize");
+});
+
 });
 
 $(window).on("load",function(){
